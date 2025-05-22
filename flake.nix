@@ -28,8 +28,8 @@
             ./settings.nix
             ./mappings.nix
             ./plugins.nix
-            # ./autocomplete.nix
-            # ./languages.nix
+            ./autocomplete.nix
+            ./languages.nix
           ] ++ extraModules;
         };
     in
