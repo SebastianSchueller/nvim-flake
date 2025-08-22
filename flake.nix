@@ -1,22 +1,20 @@
 {
   description = "A very basic flake";
-
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };
-
   outputs =
     {
       self,
       nixpkgs,
       nvf,
+      neovim-nightly-overlay
     }:
     let
-      pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          neovim-nightly-overlay.overlays.default
+        ];
+      };
       mkNvim =
         {
           pkgs,
@@ -37,4 +35,15 @@
       inherit mkNvim;
       packages.x86_64-linux.default = (mkNvim { inherit pkgs; }).neovim;
     };
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 }

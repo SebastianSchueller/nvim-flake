@@ -28,7 +28,6 @@
     languages = {
       enableDAP = true;
       enableFormat = true;
-      enableLSP = true;
       enableTreesitter = true;
       nix = {
         enable = true;
