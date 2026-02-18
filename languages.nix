@@ -23,7 +23,7 @@
       };
     };
     extraPackages = with pkgs; [
-      nixfmt-rfc-style
+      nixfmt
     ];
     languages = {
       enableDAP = true;
