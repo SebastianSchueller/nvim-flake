@@ -33,7 +33,7 @@
         enable = true;
         extraDiagnostics.enable = false;
         format = {
-          type = "nixfmt";
+          type = [ "nixfmt" ];
         };
         lsp.enable = true;
       };
