@@ -2,6 +2,7 @@
   imports = [
     ./plugins/oil.nix
     ./plugins/fzf.nix
+    ./plugins/smart-splits-nvim.nix
   ];
   config.vim = {
     git = {
@@ -28,9 +29,6 @@
       fold = true;
     };
     extraPlugins = with pkgs.vimPlugins; {
-      kitty-navigator = {
-        package = vim-kitty-navigator;
-      };
       sleuth = {
         package = vim-sleuth;
       };
