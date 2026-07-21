@@ -3,6 +3,8 @@
     ./plugins/oil.nix
     ./plugins/fzf.nix
     ./plugins/smart-splits-nvim.nix
+    ./plugins/gh-review-nvim.nix
+    ./plugins/claude-code-nvim.nix
   ];
   config.vim = {
     git = {
