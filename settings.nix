@@ -8,6 +8,7 @@
     };
     options = {
       inccommand = "split";
+      foldlevel = 1;
       showmode = false;
       splitbelow = true;
       splitright = true;
