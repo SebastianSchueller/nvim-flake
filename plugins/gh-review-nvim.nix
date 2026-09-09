@@ -9,7 +9,7 @@
         owner = "gh-tui-tools";
         repo = "gh-review.nvim";
         rev = "main";
-        hash = "sha256-+aZfWAgG4QETbTiiu+VHp7jgaubRqctv+86HxVjwMNA=";
+        hash = "sha256-Z61PKGvhIuVZ1FLMhHMutECU1Wn5lCxl9K/zPhUjmWY=";
       };
     })
   ];
