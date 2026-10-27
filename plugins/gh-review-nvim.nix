@@ -8,8 +8,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "gh-tui-tools";
         repo = "gh-review.nvim";
-        rev = "main";
-        hash = "sha256-Z61PKGvhIuVZ1FLMhHMutECU1Wn5lCxl9K/zPhUjmWY=";
+        rev = "697b9b5315be53a48af375a488d977c344eead04";
+        hash = "sha256-MQpmmYoWEE9unkbqcH4dI1I9kb5as+0HB10MfY7fXeY=";
       };
     })
   ];
